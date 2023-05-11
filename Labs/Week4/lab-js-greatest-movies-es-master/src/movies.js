@@ -7,7 +7,11 @@ function getAllDirectors(moviesArray) {
 console.log(getAllDirectors(movies))
 
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct?
-function howManyMovies(moviesArray) {}
+function howManyMovies(moviesArray) {
+  let stevenMoviesArray = moviesArray.filter(x => x.director === "Steven Spielberg")
+  return stevenMoviesArray.filter(x => x.genre.indexOf("Drama") >= 0)
+}
+console.log(howManyMovies(movies))
 
 // Iteration 3: All scores average - Get the average of all scores with 2 decimals
 function scoresAverage(moviesArray) {}
