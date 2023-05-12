@@ -73,6 +73,11 @@ li{
     line-height: normal;  
 }
 
+#ingredients li::marker {
+    content: '- ';
+    font-size: 1.2em;
+}
+
 .line{
     border-top: 3px solid #929292;
     padding-top: 1em;
