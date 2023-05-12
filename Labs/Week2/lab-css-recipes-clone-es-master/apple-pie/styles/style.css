@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,400,500,700');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Roboto;
+  line-height: 1em;
+  font-weight: 300;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+
+header{
+    background-image: url(/Labs/Week2/lab-css-recipes-clone-es-master/apple-pie/images/apple-pie.jpg);
+    background-size: 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45em;
+}
+
+header h1{
+    line-height: 7em;
+    font-family: Roboto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 6em;
+    text-align: center;
+    color: white;
+}
+
+section{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+#presentation{
+padding-top: 3em;   
+}
+
+#presentation p{
+    font-family: Roboto;
+    font-size: 30px;
+    line-height: normal;
+    text-align: justify;
+}
+
+h2{
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    size: 100px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+li{
+    font-size: 26px;
+    line-height: normal;  
+}
+
+.line{
+    border-top: 3px solid #929292;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
