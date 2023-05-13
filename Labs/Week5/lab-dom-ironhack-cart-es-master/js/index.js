@@ -45,9 +45,12 @@ function createProduct() {
 let elementRow = document.querySelector(".create-product")
 let newProductNameInput = elementRow.querySelector("input");
 let newProductNameValue = newProductNameInput.value;
-let newProductPriceInput = elementRow.querySelector('input [type="number"]');
-let newProductPriceValue = newProductNameInput.value;
+let newProductPriceInput = elementRow.querySelector('.newPrice');
+let newProductPriceValue = newProductPriceInput.value;
+console.log(newProductNameValue, newProductPriceValue);
 }
+
+
 
 window.addEventListener('load', () => {
   const calculatePricesBtn = document.getElementById('calculate');
