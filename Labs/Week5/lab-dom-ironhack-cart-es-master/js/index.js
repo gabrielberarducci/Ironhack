@@ -40,14 +40,41 @@ function removeProduct(event) {
 
 // ITERATION 5
 
-function createProduct() {
+function createProduct(event) {
   //... your code goes here
-let elementRow = document.querySelector(".create-product")
-let newProductNameInput = elementRow.querySelector("input");
-let newProductNameValue = newProductNameInput.value;
-let newProductPriceInput = elementRow.querySelector('.newPrice');
-let newProductPriceValue = newProductPriceInput.value;
-console.log(newProductNameValue, newProductPriceValue);
+  let elementRow = document.querySelector(".create-product")
+  let newProductNameInput = elementRow.querySelector("input");
+  let newProductNameValue = newProductNameInput.value;
+  let newProductPriceInput = elementRow.querySelector(".newPrice");
+  let newProductPriceValue = newProductPriceInput.value;
+
+  let newChild = document.createElement("tr");
+  newChild.className = "product";
+  newChild.innerHTML = `
+  <td class="name">
+  <span>${newProductNameValue}</span>
+  </td>
+  <td class="price">
+  $
+  <span>${newProductPriceValue}</span>
+  </td>
+  <td class="quantity">
+  <input type="number" value="0" min="0" placeholder="Quantity" />
+  </td>
+  <td class="subtotal">$<span>0</span></td>
+  <td class="action">
+  <button class="btn btn-remove">Remove</button>
+  </td>
+  `;
+
+  let parent = document.querySelector("#cart tbody");
+  parent.appendChild(newChild);
+
+  let removeBtn = newTableRow.querySelector('.btn-remove');
+  removeBtn.addEventListener('click', removeProduct);
+
+  newProductNameInput.value = '';
+  newProductPriceInput.value = 0;
 }
 
 
@@ -57,8 +84,8 @@ window.addEventListener('load', () => {
   calculatePricesBtn.addEventListener('click', calculateAll);
 
   const removeBtns = document.getElementsByClassName("btn-remove");
-  for (let index = 0; index < removeBtns.length; index++) {
-    removeBtns[index].addEventListener('click' , removeProduct);
+  for (let removeBtn of removeBtns) {
+    removeBtn.addEventListener('click' , removeProduct);
   }
 
   const createBtn = document.querySelector("#create");
