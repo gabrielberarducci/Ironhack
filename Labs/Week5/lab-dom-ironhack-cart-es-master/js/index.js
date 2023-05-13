@@ -70,7 +70,7 @@ function createProduct(event) {
   let parent = document.querySelector("#cart tbody");
   parent.appendChild(newChild);
 
-  let removeBtn = newTableRow.querySelector('.btn-remove');
+  let removeBtn = newChild.querySelector('.btn-remove');
   removeBtn.addEventListener('click', removeProduct);
 
   newProductNameInput.value = '';
