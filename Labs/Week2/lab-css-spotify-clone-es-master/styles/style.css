@@ -6,3 +6,57 @@ Green: #00B172
 White: #FFF
 
 */
+
+html
+body{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+nav{
+    position: fixed;
+    background-color: white;
+}
+
+.spotify-logo{
+   width: 10em;
+   padding-bottom: 0.2em;
+   padding-right: 34em;
+}
+
+.menu{
+    float: right;
+}
+
+.menu li{
+    display: inline;
+    text-align: center;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.banner{
+    background-image: url("/Labs/Week2/lab-css-spotify-clone-es-master/images/landing.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    color: white;
+}
+
+.banner h1{
+    font-weight: lighter;
+    font-size: 4em;
+    text-align: center;
+    padding-top: 4em;
+}
+
+.banner h3{
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-weight: lighter;
+
+}
