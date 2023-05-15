@@ -8,7 +8,8 @@ White: #FFF
 */
 
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
     margin: 0;
 }
 
@@ -51,6 +52,7 @@ a{
     font-size: 4em;
     text-align: center;
     padding-top: 4em;
+    padding-bottom: 0.2em;
 }
 
 .banner h3{
@@ -58,6 +60,93 @@ a{
     text-align: center;
     text-decoration: none;
     font-weight: lighter;
-    padding-top: 1em;
+    padding-top: 0.3em;
+}
 
+.tagsSection{
+    text-align: center;
+    align-content: center;
+    padding-top: 3em;
+    padding-bottom: 5em;
+}
+
+.tagsTitle{
+    color: black;
+    font-size: 1.6em;
+    font-weight: bold;
+    padding-bottom: 3em;
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+    text-decoration-color: #00B172;
+}
+
+.tagBox{
+    width: 100%;
+    align-items: center;
+    display: table;
+}
+
+.tag img{
+    width: 5em;
+}
+
+.tag{
+    width: 33%;
+    display: table-cell;
+    margin: auto;
+    text-align: center;
+}
+.tag h4{
+    color: #00B172;
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+}
+
+.tag p{
+    padding-inline: 2em;
+}
+
+.greenBackground{
+    background-color: #00B172;
+    padding-left: 4em;
+    width: 100%;
+}
+
+.greenBackground h3{
+    color: white;
+    font-size: 1.9em;
+    font-weight: bold;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+    text-decoration-color: white;
+}
+
+.textBox{
+    width: 17em;
+}
+
+.textBox h4{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.textBox p{
+    color: white;
+    padding: 2em 0em;
+    font-size: 1.2em;
+    font: weight lighter;
+}
+
+.white-logo{
+    align-items: center;
+    width: 7em;
+    padding-top: 20em;
+}
+
+.screenshot{
+    align-items: right;
+    width: 17em;
 }
