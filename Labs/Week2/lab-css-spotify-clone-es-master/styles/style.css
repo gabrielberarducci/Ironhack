@@ -7,29 +7,29 @@ White: #FFF
 
 */
 
-html
-body{
-    font-family: Helvetica, Arial, sans-serif;
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
-nav{
+header{
     position: fixed;
     background-color: white;
+    width: 100%;
 }
 
 .spotify-logo{
-   width: 10em;
-   padding-bottom: 0.2em;
-   padding-right: 34em;
+    width: 11em;
+    padding: 0.5em;
 }
 
-.menu{
+header nav ul{
     float: right;
+    padding-top: 1.7em;
 }
 
-.menu li{
+li{
     display: inline;
-    text-align: center;
 }
 
 a{
@@ -58,5 +58,6 @@ a{
     text-align: center;
     text-decoration: none;
     font-weight: lighter;
+    padding-top: 1em;
 
 }
