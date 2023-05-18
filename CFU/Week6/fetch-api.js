@@ -68,3 +68,4 @@ getPosts().then((data) => {
         post.appendChild(newChild);      
     }
 })
+
