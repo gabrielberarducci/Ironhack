@@ -30,19 +30,16 @@ function printSeconds() {
 
 // ==> BONUS
 function printMilliseconds() {
-  // ... your code goes here
 }
 
 function printSplit() {
-  let parent = document.getElementById("splits");
   let newSplit = document.createElement("lo");
   newSplit.innerHTML = `<li class="list-item">${chronometer.split()}</li>`
-  parent.appendChild(newSplit);
+  splitsElement.appendChild(newSplit);
 }
 
 function clearSplits() {
-  let parent = document.getElementById("splits");
-  parent.innerHTML = "";
+  splitsElement.innerHTML = "";
 }
 
 function setStopBtn() {
@@ -70,7 +67,9 @@ btnLeftElement.addEventListener('click', () => {
   if(btnLeftElement.className === "btn start"){
     setStopBtn();
     setSplitBtn();
-    chronometer.start(() => printTime());
+    chronometer.start(() => {
+      printTime();
+    });
   } else {
     setStartBtn()
     setResetBtn()

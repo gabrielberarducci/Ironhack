@@ -37,6 +37,10 @@ class Chronometer {
   split() {
     return this.computeTwoDigitNumber(this.getMinutes()) + ":" + this.computeTwoDigitNumber(this.getSeconds());
   }
+
+  getMiliSeconds() {
+    return (this.miliseconds);
+  }
 }
 
 // The following is required to make unit tests work.
