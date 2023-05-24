@@ -109,7 +109,7 @@ En resumen, la sección "sobre mí" es una excelente manera de brindar a los usu
 
 Gabriel Berarducci - gabrielberarducci@gmail.com
 
-Project Link: [https://github.com/gabrielberarducci/Ironhack/tree/main/Projects/Project1](GitHub Project)
+Project Link: <a href="https://github.com/gabrielberarducci/Ironhack/tree/main/Projects/Project1">GitHub Project</a>
 
 Presentation Link: [Insert here your presentation link](insert-link-here)
 
