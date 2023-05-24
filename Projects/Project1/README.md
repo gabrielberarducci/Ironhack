@@ -40,17 +40,7 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
         <li><a href="#construido-con">Construido Con</a></li>
       </ul>
     </li>
-    <li>
-    <a href="#roadmap">Roadmap</a>
-     <ul>
-     <li><a href="#backlog">Back log</a></li>
-        <li><a href="#day-one">Lunes 23, Enero 2023</a></li>
-        <li><a href="#day-two">Martes 24, Enero 2023</a></li>
-        <li><a href="#day-three">Miercoles 25, Enero 2023</a></li>
-        <li><a href="#day-four">Jueves 26, Enero 2023</a></li>
-        <li><a href="#day-five">Viernes 27, Enero 2023</a></li>
-      </ul>
-    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#acerca">Acerca</a></li>
     <li><a href="#agradecimientos">Agradecimientos</a></li>
     <li><a href="#desafío-técnico">Desafío Técnico</a></li>
@@ -98,36 +88,7 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 ## Roadmap
 
-#### Backlog
-
-- [ ] Ej - Tarea a completar y mover a su respectivo dia de ejecucion
-
-#### Day One
-
-#### Day One
-
-###### Lunes 23, Enero 2023
-
-- [ ] Tarea no completada
-- [x] Tarea Completada
-- [ ] Ej - Crear section "projects" en html
-- [x] Ej - Crear section "projects" en html
-
-#### Day Two
-
-###### Martes 24, Enero 2023
-
-#### Day Three
-
-###### Miercoles 25, Enero 2023
-
-#### Day Four
-
-###### Jueves 26, Enero 2023
-
-#### Day Five
-
-###### Viernes 27, Enero 2023
+<a href="https://trello.com/invite/b/harhnHb5/ATTI0e7e13bb262fa51a6b01c77bdc0fa8d8B1B7683A/project-1-ironhack-frontend-bootcamp">Trello Project.</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
