@@ -107,9 +107,9 @@ En esta sección se puede incluir información como:
 
 En resumen, la sección "sobre mí" es una excelente manera de brindar a los usuarios y contribuidores una idea de quién está detrás del proyecto y cómo pueden ponerse en contacto con ellos si tienen preguntas o comentarios. Es una buena manera de establecer una conexión con la comunidad de desarrolladores y una forma de mostrar la transparencia en el proyecto.
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Gabriel Berarducci - gabrielberarducci@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/gabrielberarducci/Ironhack/tree/main/Projects/Project1](GitHub Project)
 
 Presentation Link: [Insert here your presentation link](insert-link-here)
 
