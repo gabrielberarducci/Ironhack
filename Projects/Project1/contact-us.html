@@ -20,17 +20,18 @@
             <button>Contact Us</button>
         </header>
 
-        <form action="">
+        <form action="" method="get" id="form">
             <h1>Contact Us</h1>
-            <p>Full Name*</p>
-            <input type="text" name="name" id="name">
-            <p>Email</p>
-            <input type="email" name="Email" id="email">
-            <p>Phone</p>
-            <input type="tel" name="phone" id="phone">
-            <p>Message*</p>
-            <input type="text" name="message" id="message">
+            <label for="name">Full Name*</label>
+            <input type="text" placeholder="Enter your full name" id="name" autocomplete="name" required>
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter your email" id="email" autocomplete="email">
+            <label for="phone">Phone</label>
+            <input type="tel" placeholder="Enter your phone" id="phone" autocomplete="mobile">
+            <label for="message">Message*</label>
+            <input type="text" placeholder="Write your message here..." id="message" required>
             <button type="submit">Submit</button>
+            <p id="SuceedMessage" hidden = "false" >Thank you! Your Message Have Been Sent.</p>
         </form>
 
         <footer>
@@ -45,5 +46,6 @@
                 <li><a href="">Privacy Policy</a></li>
             </ul>
         </footer>
+        <script src="/Projects/Project1/resources/js/contact.js"></script>
     </body>
 </html>
