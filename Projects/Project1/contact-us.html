@@ -4,11 +4,17 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="#">
         <title>Circle Agency - Contact Us</title>
         <link rel="stylesheet" href="resources/styles/style.css" />
 
     </head>
     <body>
+        <div class="result">
+            <p id="suceedMessage" hidden = "true">Thank you! Your Message Have Been Sent.</p>
+            <p id="errorMessage" hidden = "true">Something went wrong!!! Please try again.</p>
+        </div>
+
         <header>
             <img src="/Projects/Project1/resources/images/logos/circle.svg" alt="Circle Logo">
             <ul>
@@ -19,20 +25,21 @@
             </ul>
             <button>Contact Us</button>
         </header>
-
-        <form action="" method="get" id="form">
+        <div id="main">
             <h1>Contact Us</h1>
-            <label for="name">Full Name*</label>
-            <input type="text" placeholder="Enter your full name" id="name" autocomplete="name" required>
-            <label for="email">Email</label>
-            <input type="email" placeholder="Enter your email" id="email" autocomplete="email">
-            <label for="phone">Phone</label>
-            <input type="tel" placeholder="Enter your phone" id="phone" autocomplete="mobile">
-            <label for="message">Message*</label>
-            <input type="text" placeholder="Write your message here..." id="message" required>
-            <button type="submit">Submit</button>
-            <p id="SuceedMessage" hidden = "false" >Thank you! Your Message Have Been Sent.</p>
-        </form>
+            <form action="" id="form">
+                <label for="name">Full Name*</label>
+                <input type="text" placeholder="Enter your full name" id="name"  required>
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter your email" id="email" >
+                <label for="phone">Phone</label>
+                <input type="tel" placeholder="Enter your phone" id="phone" >
+                <label for="message">Message*</label>
+                <input type="text" placeholder="Write your message here..." id="message" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
 
         <footer>
             <img src="/Projects/Project1/resources/images/logos/circle.svg" alt="Circle logo">
