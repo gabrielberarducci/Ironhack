@@ -24,13 +24,17 @@ function newRandomChild(parent, data){
     <div id="${data[i].id}">    
         <h2>${data[i].title}</h2>
         <p>${data[i].body}</p>
-        <p>Author: ${data[i].userId}</p>
+        <a rel="stylesheet" href="http://127.0.0.1:5500/Projects/Project1/project.html?id=${data[i].id}">Read More</a>
     </div> 
     `;
     parent.appendChild(newChild);
 }
 
 function newChildById(parent, data){
+    // Obtener la URL actual
+    var url = new URL(window.location.href);
+    // Obtener el valor de un parámetro específico
+    var id = url.searchParams.get('id');
     let newChild = document.createElement("div");
     newChild.className = "post";
     newChild = document.createElement("div");
@@ -45,9 +49,10 @@ function newChildById(parent, data){
 }
 
 getPosts().then((data) => {
-    let parent = document.querySelector("#projects");
-    newRandomChild(parent,data);
-    newRandomChild(parent,data);
-    newRandomChild(parent,data);
-    newChildById(parent,data,3);
+    let projectsTabsParent = document.querySelector("#projectsTabs");
+    let mainProjectParent = document.querySelector("#mainProject");
+    newChildById(mainProjectParent,data);
+    newRandomChild(projectsTabsParent,data);
+    newRandomChild(projectsTabsParent,data);
+    newRandomChild(projectsTabsParent,data);
 })
