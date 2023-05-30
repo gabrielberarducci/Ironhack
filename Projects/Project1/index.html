@@ -14,29 +14,37 @@
     </head>
     <body>
         <span class="loader"></span>
-        <header>
-            <img src="/Projects/Project1/resources/images/logos/circle.svg" alt="Circle Logo">
-            <ul>
-                <li>Home</li>
-                <li>Projects</li>
-                <li>Services</li>
-                <li>About</li>
-            </ul>
-            <button>Contact Us</button>
+        <button id="scrollToTopBtn" onclick="scrollToTop()">Scroll to Top</button>
+        <header class="header">
+            <img class="header-logo" src="/Projects/Project1/resources/images/logos/circle.svg" alt="Circle Logo">
+            <nav class="header-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>    
+            <button class="header-button button">Contact Us</button>
         </header>
         
-        <hero id="hero">
-            <h1>Empower Your Bussiness With Stunning Design!</h1>
-            <p>Cricle is a digital design and development studio.</p>
-            <p>We design and develop astonishing websites and mobile apps.</p>
-            <span>See our work</span>
-            <button>Get in touch</button>
-            <img src="/Projects/Project1/resources/images/hero-section/card-1.png" alt="card1">
-            <img src="/Projects/Project1/resources/images/hero-section/hero-image.png" alt="hero-image">
-            <img src="/Projects/Project1/resources/images/hero-section/card-2.png" alt="card2">
+        <hero class="hero">
+            <div class="hero-content">
+                <h1>Empower Your Bussiness With Stunning Design!</h1>
+                <p>Cricle is a digital design and development studio.</p>
+                <p>We design and develop astonishing websites and mobile apps.</p>
+                <label>See our work</label>
+                <button class="hero-button button">Get in touch</button>
+            </div>
+
+            <div class="hero-img-container">
+                <img class="hero-img-card1" src="/Projects/Project1/resources/images/hero-section/card-1.png" alt="card1">
+                <img class="hero-img" src="/Projects/Project1/resources/images/hero-section/hero-image.png" alt="hero-image">
+                <img class="hero-img-card2" src="/Projects/Project1/resources/images/hero-section/card-2.png" alt="card2">
+            </div>
         </hero>
         
-        <banner id="banner">
+        <banner class="banner">
             <!-- Caroussel with several logos. -->
             <ul class="logo-carousel">
                 <li><img src="/Projects/Project1/resources/images/logos/airbnb-logo.svg" alt="Logo 1"></li>
@@ -49,8 +57,9 @@
             </ul>
         </banner>
         
-        <section id="articles">
-            <h2>Recent Projects</h2>
+        <section class="projects-container">
+            <h2 class="title">Recent Projects</h2>
+            <div class="articles-container"></div>
         </section>
         
         <section id="testimonial">
@@ -65,6 +74,7 @@
         </section>
 
         <section id="services">
+            <h2 class="title">Our Services</h2>
             <div class="tag tag1">
                 <img src="/Projects/Project1/resources/images/services-section/icons/1.svg" alt="user interface logo">
                 <h3>User Interface Design</h3>
@@ -87,7 +97,7 @@
 
         <section id="newsletter">
             <form action="">
-                <h2>Do you have any question?</h2>
+                <h2 class="title">Do you have any question?</h2>
                 <q>Let us help you!</q>
                 <input id="suscribe_input" inputmode="email"></input>
                 <button type="submit">Subscribe</button>

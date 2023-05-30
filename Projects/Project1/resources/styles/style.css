@@ -12,6 +12,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: rgb(238, 238, 238);
 }
 
 
@@ -22,7 +23,19 @@ body {
 
 /* ------------------------------ Splash page ------------------------------ */
 
-/* Your CSS code goes here */
+#scrollToTopBtn {
+  display: none; /* Ocultar el botón inicialmente */
+  position: fixed;
+  bottom: 0;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
+
 
 /* ------ CIRCULAR ANIMATION ------ */
 
@@ -49,21 +62,135 @@ body {
 
 /* ------------------------------ Navbar ------------------------------ */
 
-/* Your CSS code goes here */
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center; 
+}
 
-/* ------------------------------ Header ------------------------------ */
+.header-menu {
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
 
-/* Your CSS code goes here */
+.header-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
+.header-menu li {
+  display: inline-block;
+}
+
+.header-menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #626262;
+  font-weight: bold;
+}
+
+.header-menu li a:hover {
+  color: #072ac8;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 8rem;
+  height: 2.5rem;
+  border: none;
+  font-weight: 700;
+  color: white;
+  background-color: #072ac8;
+}
+
+/* ------------------------------ Hero ------------------------------ */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  color: #626262;
+  font-size: 1.2rem;
+  margin: 0.5rem 0rem;
+}
+
+.hero label {
+  color: #626262;
+  font-weight: 500;
+  padding-left: 10rem;
+  padding-right: 1rem;
+}
+
+.hero-button {
+  display: inline;
+}
+
+.hero-img-container {
+  flex: 1;
+  text-align: right;
+  position: relative;
+  }
+
+.hero-img {
+  height: 30rem;
+  position:static
+}
+
+.hero-img-card1 {
+  height: 16rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+}
+
+.hero-img-card2 {
+  height: 16rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 /* ------------------------------ Partners ------------------------------ */
 
-/* Your CSS code goes here */
+.logo-carousel {
+  padding: 7rem 4rem;
+}
+
 .logo-carousel li img {
   height: 3.5rem;
   overflow: hidden;   /* Oculta los logos adicionales fuera del carrusel */
   filter: grayscale(100%); /* Convierte la imagen a blanco y negro */
   transition: filter 0.5s ease; /* Agrega una transición suave */
-
 }
 
 .logo-carousel li img:hover {
@@ -72,7 +199,43 @@ body {
 
 /* ------------------------------ Recent projects ------------------------------ */
 
-/* Your CSS code goes here */
+.projects-container {
+  background-color: #072ac8;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-content: center;
+  margin-bottom: 5rem;
+}
+
+.projects-container h2 {
+  font-size: 2rem;
+  padding: 2rem 4rem;
+}
+
+.articles-container {
+  justify-content: center;
+  background-color: #FF3D00;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  padding: 1rem 4rem;
+}
+
+.article {
+  background-color: white;
+  padding: 1rem;
+  width: 18rem;
+  height: 30rem;
+}
+
+.article h2 {
+  font-size: 1.2rem;
+
+}
 
 /* ------------------------------ Client reviews ------------------------------ */
 

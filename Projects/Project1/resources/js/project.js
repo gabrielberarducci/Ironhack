@@ -21,7 +21,7 @@ function newRandomChild(parent, data){
     newChild = document.createElement("div");
     let i = Math.floor(Math.random() * 100);
     newChild.innerHTML = `
-    <div id="${data[i].id}">    
+    <div class="article" id="${data[i].id}">    
         <h2>${data[i].title}</h2>
         <p>${data[i].body}</p>
         <a rel="stylesheet" href="http://127.0.0.1:5500/Projects/Project1/project.html?id=${data[i].id}">Read More</a>
@@ -39,7 +39,7 @@ function newChildById(parent, data){
     newChild.className = "post";
     newChild = document.createElement("div");
     newChild.innerHTML = `
-    <div id="${data[id-1].id}">    
+    <div class="main-article" id="${data[id-1].id}">    
         <h2>${data[id-1].title}</h2>
         <p>${data[id-1].body}</p>
         <p>Author: ${data[id-1].userId}</p>
