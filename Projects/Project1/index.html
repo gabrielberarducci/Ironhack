@@ -7,14 +7,12 @@
         <title>Circle Agency</title>
         <link rel="stylesheet" href="resources/styles/style.css" />
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-</head>
-
     </head>
     <body>
         <span class="loader"></span>
+
         <button id="scrollToTopBtn" onclick="scrollToTop()">Scroll to Top</button>
+
         <header class="header">
             <img class="header-logo" src="/Projects/Project1/resources/images/logos/circle.svg" alt="Circle Logo">
             <nav class="header-menu">
@@ -27,7 +25,7 @@
             </nav>    
             <button class="header-button button">Contact Us</button>
         </header>
-        
+    
         <hero class="hero">
             <div class="hero-content">
                 <h1>Empower Your Bussiness With Stunning Design!</h1>
@@ -36,7 +34,6 @@
                 <label>See our work</label>
                 <button class="hero-button button">Get in touch</button>
             </div>
-
             <div class="hero-img-container">
                 <img class="hero-img-card1" src="/Projects/Project1/resources/images/hero-section/card-1.png" alt="card1">
                 <img class="hero-img" src="/Projects/Project1/resources/images/hero-section/hero-image.png" alt="hero-image">
@@ -44,25 +41,25 @@
             </div>
         </hero>
         
-        <banner class="banner">
-            <!-- Caroussel with several logos. -->
-            <ul class="logo-carousel">
-                <li><img src="/Projects/Project1/resources/images/logos/airbnb-logo.svg" alt="Logo 1"></li>
-                <li><img src="/Projects/Project1/resources/images/logos/google-logo.svg" alt="Logo 2"></li>
-                <li><img src="/Projects/Project1/resources/images/logos/microsoft-logo.svg" alt="Logo 3"></li>
-                <li><img src="/Projects/Project1/resources/images/logos/fedex-logo.svg" alt="Logo 4"></li>
-                <li><img src="/Projects/Project1/resources/images/logos/amazon-logo.svg" alt="Logo 5"></li>
-                <li><img src="/Projects/Project1/resources/images/logos/Logo_NIKE.svg" alt="Logo 6"></li>
-                <li><img src="/Projects/Project1/resources/images/logos/Adidas_Logo.svg" alt="Logo 7"></li>
-            </ul>
-        </banner>
+        <div class="corusel">
+            <!-- Carousel with several logos. -->
+            <div class="corusel-inner logo-carousel">
+                <div class="carousel-item"><img src="/Projects/Project1/resources/images/logos/airbnb-logo.svg" alt="Logo 1"></div>
+                <div class="carousel-item"><img src="/Projects/Project1/resources/images/logos/google-logo.svg" alt="Logo 2"></div>
+                <div class="carousel-item"><img src="/Projects/Project1/resources/images/logos/microsoft-logo.svg" alt="Logo 3"></div>
+                <div class="carousel-item"><img src="/Projects/Project1/resources/images/logos/fedex-logo.svg" alt="Logo 4"></div>
+                <div class="carousel-item"><img src="/Projects/Project1/resources/images/logos/amazon-logo.svg" alt="Logo 5"></div>
+                <div class="carousel-item"><img src="/Projects/Project1/resources/images/logos/Logo_NIKE.svg" alt="Logo 6"></div>
+                <div class="carousel-item"><img src="/Projects/Project1/resources/images/logos/Adidas_Logo.svg" alt="Logo 7"></div>
+            </div>
+        </div>
         
         <section class="projects-container">
             <h2 class="title">Recent Projects</h2>
             <div class="articles-container"></div>
         </section>
         
-        <section id="testimonial">
+        <section class="testimonial">
             <h3>Hear What Our Clients Have to Say</h3>
             <q>Circle helped us through every stage of our startup. We really enjoyed working with you.</q>
             <cite id="author">Kristin Watson</cite>
@@ -73,7 +70,7 @@
             <img src="/Projects/Project1/resources/images/testimonial-section/memoji-4.png" alt="emoji4">
         </section>
 
-        <section id="services">
+        <section class="services">
             <h2 class="title">Our Services</h2>
             <div class="tag tag1">
                 <img src="/Projects/Project1/resources/images/services-section/icons/1.svg" alt="user interface logo">
@@ -95,7 +92,7 @@
             </div>
         </section>
 
-        <section id="newsletter">
+        <section class="newsletter">
             <form action="">
                 <h2 class="title">Do you have any question?</h2>
                 <q>Let us help you!</q>

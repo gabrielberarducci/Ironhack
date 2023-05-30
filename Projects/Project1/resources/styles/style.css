@@ -13,6 +13,9 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: rgb(238, 238, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -23,8 +26,10 @@ body {
 
 /* ------------------------------ Splash page ------------------------------ */
 
+/* ------------------------------ Back to TOP button ------------------------------ */
+
 #scrollToTopBtn {
-  display: none; /* Ocultar el botón inicialmente */
+  display: none; /* button initially hidden */
   position: fixed;
   bottom: 0;
   cursor: pointer;
@@ -37,7 +42,7 @@ body {
 }
 
 
-/* ------ CIRCULAR ANIMATION ------ */
+/* ------------------------------ Loader ------------------------------ */
 
 .loader {
   width: 48px;
@@ -67,15 +72,15 @@ body {
   height: 80px;
   display: flex;
   justify-content:space-between;
-  align-items: center; 
+  align-items: center;
+  padding: 2rem;
 }
 
 .header-menu {
   display: inline-block;
   align-items: center;
   text-align: center;
-  margin-left: 15%;
-  margin-right: 15%;
+
 }
 
 .header-menu ul {
@@ -122,14 +127,17 @@ body {
 /* ------------------------------ Hero ------------------------------ */
 
 .hero {
+  background-color: #626262; 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 2rem 4rem;
+  max-width: 80rem;
+  margin: 2rem;
 }
 
 .hero-content {
-  flex: 1;
+  background-color: #072ac8;
+  padding: 2rem 6rem;
+  max-width: 50rem;
 }
 
 .hero h1 {
@@ -155,7 +163,7 @@ body {
 }
 
 .hero-img-container {
-  flex: 1;
+  background-color: #FF3D00;
   text-align: right;
   position: relative;
   }
@@ -182,20 +190,61 @@ body {
 }
 /* ------------------------------ Partners ------------------------------ */
 
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+.carousel-item img {
+  width: 9rem;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.carousel-controls button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.carousel-controls button:focus {
+  outline: none;
+}
+/* 
+.banner {
+  display: flex;
+  max-width: 80rem;
+  margin: 2rem;
+}
+
 .logo-carousel {
-  padding: 7rem 4rem;
+  padding: 1rem 1rem;
 }
 
 .logo-carousel li img {
   height: 3.5rem;
-  overflow: hidden;   /* Oculta los logos adicionales fuera del carrusel */
-  filter: grayscale(100%); /* Convierte la imagen a blanco y negro */
-  transition: filter 0.5s ease; /* Agrega una transición suave */
+  overflow: hidden;   /* Oculta los logos adicionales fuera del carrusel 
+  filter: grayscale(100%); /* Convierte la imagen a blanco y negro 
+  transition: filter 0.5s ease; /* Agrega una transición suave 
 }
 
 .logo-carousel li img:hover {
-  filter: grayscale(0%); /* Devuelve el color original */
-}
+  filter: grayscale(0%); /* Devuelve el color original 
+} */
 
 /* ------------------------------ Recent projects ------------------------------ */
 
@@ -205,7 +254,8 @@ body {
   flex-direction: column;
   justify-content:center;
   align-content: center;
-  margin-bottom: 5rem;
+  margin: 2rem;
+  max-width: 80rem;
 }
 
 .projects-container h2 {
@@ -216,7 +266,6 @@ body {
 .articles-container {
   justify-content: center;
   background-color: #FF3D00;
-  max-width: 70rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -239,11 +288,21 @@ body {
 
 /* ------------------------------ Client reviews ------------------------------ */
 
-/* Your CSS code goes here */
+.testimonial { 
+  background-color: rgb(0, 103, 22);
+  display: flex;
+  max-width: 80rem;
+  margin: 2rem;
+}
 
 /* ------------------------------ Services ------------------------------ */
 
-/* Your CSS code goes here */
+.services { 
+  background-color: rgb(156, 0, 26);
+  display: flex;
+  max-width: 80rem;
+  margin: 2rem;
+}
 
 /* ------------------------------ Questions form ------------------------------ */
 
