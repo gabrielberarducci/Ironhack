@@ -26,7 +26,26 @@ body {
 
 /* ------ CIRCULAR ANIMATION ------ */
 
-/* Your CSS code goes here */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: #FF3D00;
+  border-radius: 50%;
+  display: none;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+
 
 /* ------------------------------ Navbar ------------------------------ */
 
@@ -39,6 +58,17 @@ body {
 /* ------------------------------ Partners ------------------------------ */
 
 /* Your CSS code goes here */
+.logo-carousel li img {
+  height: 3.5rem;
+  overflow: hidden;   /* Oculta los logos adicionales fuera del carrusel */
+  filter: grayscale(100%); /* Convierte la imagen a blanco y negro */
+  transition: filter 0.5s ease; /* Agrega una transición suave */
+
+}
+
+.logo-carousel li img:hover {
+  filter: grayscale(0%); /* Devuelve el color original */
+}
 
 /* ------------------------------ Recent projects ------------------------------ */
 
