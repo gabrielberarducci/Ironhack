@@ -15,16 +15,18 @@ function getPosts(){
     })
 }
 
-function newRandomChild(parent, data){
+function newRandomChild(parent, data, id = 0){ //el parametro id es opcional- 
     let newChild = document.createElement("div");
     newChild.className = "post";
     newChild = document.createElement("div");
     let i = Math.floor(Math.random() * 100);
+    if(id > 0) i=id-1; //permite de forma opcional elegir el articulo segun su ID. si no lo hace random.
     newChild.innerHTML = `
     <div class="article" id="${data[i].id}">    
+    <img class="project-img" src="/Projects/Project1/resources/images/projects-section/${(i % 6) + 1}.jpg" alt="Project-image">
         <h2>${data[i].title}</h2>
         <p>${data[i].body}</p>
-        <a rel="stylesheet" href="http://127.0.0.1:5500/Projects/Project1/project.html?id=${data[i].id}">Read More</a>
+        <a rel="stylesheet" href="http://127.0.0.1:5500/Projects/Project1/project.html?id=${data[i].id}">Learn More</a>
     </div> 
     `;
     parent.appendChild(newChild);
