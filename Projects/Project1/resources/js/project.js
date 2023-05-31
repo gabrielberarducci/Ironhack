@@ -38,20 +38,28 @@ function newChildById(parent, data){
     // Obtener el valor de un parámetro específico
     var id = url.searchParams.get('id');
     let newChild = document.createElement("div");
+    const todayDate = new Date();
+    const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = todayDate.toLocaleDateString('en-US', options);
+
     newChild.className = "post";
     newChild = document.createElement("div");
     newChild.innerHTML = `
-    <div class="main-article" id="${data[id-1].id}">    
+    <div id="${data[id-1].id}">    
         <h2>${data[id-1].title}</h2>
+        <div class="subtitle">
+            <p class="articleSubtitle">${data[id-1].title}</p>
+            <p class="date">Completed on ${formattedDate}</p>
+        </div>
+        <img src="/Projects/Project1/resources/images/projects-section/${((id-1) % 6) + 1}.jpg"
         <p>${data[id-1].body}</p>
-        <p>Author: ${data[id-1].userId}</p>
     </div> 
     `;
     parent.appendChild(newChild);
 }
 
 getPosts().then((data) => {
-    let projectsTabsParent = document.querySelector("#projectsTabs");
+    let projectsTabsParent = document.querySelector(".articles-container");
     let mainProjectParent = document.querySelector("#mainProject");
     newChildById(mainProjectParent,data);
     newRandomChild(projectsTabsParent,data);

@@ -462,8 +462,39 @@ a {
 
 /* ------------------------------ Project main ------------------------------ */
 
-/* Your CSS code goes here */
+#mainProject {
+  width: 60rem;
+  margin: 3rem;
+}
 
+#mainProject img {
+  width: 60rem;
+  height: 25rem;
+  margin: 4rem 0rem;
+  object-fit: cover;
+}
+
+#mainProject h2 {
+  font-size: 3.5rem;
+}
+
+.subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  color: #626262;
+  margin-top: 2rem;
+  width: 60rem;
+}
+
+.articleSubtitle {
+  width: 35rem;
+}
+
+.date {
+  width: 15rem;
+}
 /* ----------------------------------------------------------------------------- */
 /* ------------------------------ CONTACT-US html ------------------------------ */
 /* ----------------------------------------------------------------------------- */
