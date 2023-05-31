@@ -4,6 +4,10 @@
   --primary: #072ac8;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
