@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
   const loading = document.querySelector('.loading');
   this.setTimeout(() => {
     loading.style.display = 'none';    
-  }, 1500);
+  }, 500);
 
 });
 

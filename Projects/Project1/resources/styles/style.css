@@ -136,6 +136,11 @@ a {
   color: white;
   background-color: #072ac8;
   cursor: pointer;
+  
+}
+
+.button:hover {
+  background-color: rgb(36, 36, 36);
 }
 
 /* ------------------------------ Hero ------------------------------ */
@@ -505,7 +510,97 @@ a {
 
 /* ------------------------------ Form ------------------------------ */
 
-/* Your CSS code goes here */
+#main {
+width: 70%;
+max-width: 60rem;
+}
+
+#main h1 {
+  font-size: 3rem;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+#form label {
+  color: #626262;
+}
+
+#form input {
+  background-color: rgb(222, 222, 222);
+  border: none;
+  padding: 1rem;
+}
+
+#name {
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+.emailAndPhone {
+  display: flex;
+  justify-content: space-between;
+}
+
+.emailContainer {
+  width: 49%;
+}
+
+.phoneContainer {
+  width: 49%;
+}
+#email {
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+#phone {
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+#message {
+  font-family:monospace;
+  width: 100%;
+  height: 10rem;
+  margin: 1rem 0rem;
+  vertical-align: top;
+  resize: vertical;
+  background-color: rgb(222, 222, 222);
+  border: none;
+  padding: 1rem;
+
+}
+
+.contactButton {
+  width: 100%;
+}
+
+.result {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+#suceedMessage {
+  background-color: rgb(14, 193, 14);
+  width: 100%;
+  height: 3rem;
+  padding: 1rem;
+  color: white;
+  text-align: start;
+}
+
+#errorMessage {
+  background-color: rgb(193, 14, 14);
+  width: 100%;
+  height: 3rem;
+  padding: 1rem;
+  color: white;
+  text-align: start;
+}
 
 /* ----------------------------------------------------------------------------- */
 /* ------------------------------ About html ------------------------------ */

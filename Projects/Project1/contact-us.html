@@ -10,7 +10,10 @@
 
     </head>
     <body>
-        <span class="loader"></span>
+        <div class="loading">
+            <div class="loading-spinner"></div>
+        </div>
+
         <div class="result">
             <p id="suceedMessage" hidden = "true">Thank you! Your Message Have Been Sent.</p>
             <p id="errorMessage" hidden = "true">Something went wrong!!! Please try again.</p>
@@ -23,8 +26,8 @@
                 <nav class="header-menu">
                 <ul>
                     <li><a href="/Projects/Project1/index.html">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="/Projects/Project1/index.html#projects">Projects</a></li>
+                    <li><a href="/Projects/Project1/index.html#services">Services</a></li>
                     <li><a href="/Projects/Project1/aboutUs.html">About</a></li>
                 </ul>
             </nav>    
@@ -34,17 +37,23 @@
         </header>
         
         <div id="main">
-            <h1>Contact Us</h1>
+            <h1 class="title">Contact Us</h1>
             <form action="" id="form">
                 <label for="name">Full Name*</label>
                 <input type="text" placeholder="Enter your full name" id="name"  required>
-                <label for="email">Email</label>
-                <input type="email" placeholder="Enter your email" id="email" >
-                <label for="phone">Phone</label>
-                <input type="tel" placeholder="Enter your phone" id="phone" >
+                <div class="emailAndPhone">
+                    <div class="emailContainer">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Enter your email" id="email" >
+                    </div>
+                    <div class="phoneContainer">
+                        <label for="phone">Phone</label>
+                        <input type="tel" placeholder="Enter your phone" id="phone" >
+                    </div>
+                </div>
                 <label for="message">Message*</label>
-                <input type="text" placeholder="Write your message here..." id="message" required>
-                <button type="submit">Submit</button>
+                <textarea type="text" placeholder="Write your message here..." id="message" required></textarea>
+                <button class="button contactButton" type="submit">Submit</button>
             </form>
         </div>
 
@@ -73,7 +82,7 @@
                 </div>
             </div>
         </footer>
-
+        <script src="/Projects/Project1/resources/js/index.js"></script>
         <script src="/Projects/Project1/resources/js/contact.js"></script>
     </body>
 </html>
