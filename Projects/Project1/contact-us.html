@@ -9,33 +9,42 @@
         <link rel="stylesheet" href="resources/styles/style.css" />
 
     </head>
+        <!-- Tanto el loading, header y footer han sido heredados del index y no han sufrido ningun tipo de modificacion en esta pagina. -->
     <body>
         <div class="loading">
             <div class="loading-spinner"></div>
         </div>
-
+        <!-- Esta seccion solo tiene las etiquetas de los mensajes de Exito o Error al momento de enviar el formulario. 
+        Las mismas se encuentran invisibles y solo se muestran momentaneamente cuando es necesario. -->
         <div class="result">
             <p id="suceedMessage" hidden = "true">Thank you! Your Message Have Been Sent.</p>
             <p id="errorMessage" hidden = "true">Something went wrong!!! Please try again.</p>
         </div>
 
-        <header class="header">
-            <a href="/Projects/Project1/index.html">
-                <img class="header-logo" src="/Projects/Project1/resources/images/logos/circle.svg" alt="Circle Logo">
+        <header class="header top-nav">
+            
+            <a href="/index.html">
+                <img class="header-logo" src="/resources/images/logos/circle.svg" alt="Circle Logo">
             </a>
-                <nav class="header-menu">
-                <ul>
-                    <li><a href="/Projects/Project1/index.html">Home</a></li>
-                    <li><a href="/Projects/Project1/index.html#projects">Projects</a></li>
-                    <li><a href="/Projects/Project1/index.html#services">Services</a></li>
-                    <li><a href="/Projects/Project1/aboutUs.html">About</a></li>
+            
+            <input id="menu-toggle" type="checkbox" />
+            
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+
+                <ul class="menu">
+                    <li><a href="/index.html#">Home</a></li>
+                    <li><a href="/index.html#projects">Projects</a></li>
+                    <li><a href="/index.html#services">Services</a></li>
+                    <li><a href="/aboutUs.html">About</a></li>
                 </ul>
-            </nav>    
-            <a href="/Projects/Project1/contact-us.html">
+ 
+            <a class="contactBtn" href="/contact-us.html">
                 <button class="header-button button" type="button">Contact Us</button>
             </a>
         </header>
-        
+        <!-- Aqui tenemos el formulario de contacto. -->
         <div id="main">
             <h1 class="title">Contact Us</h1>
             <form action="" id="form">
@@ -57,32 +66,25 @@
             </form>
         </div>
 
-
-        <footer>
-            <div class="footer-container">
-                <div class="footer-left">
-                    <a href="/Projects/Project1/index.html">
-                        <img class="header-logo" src="/Projects/Project1/resources/images/logos/circle.svg" alt="Circle Logo">
-                    </a>
-                    <address>2972 Westheimer Rd. Santa Ana, Illinois 85486</address>
-                </div>
-                <div class="footer-right">
-                    <div class="table">
-                        <div class="row">
-                            <div class="col"><a href="/Projects/Project1/aboutUs.html">Team</a></div>
-                            <div class="col"><a href="#services">Services</a></div>
-                            <div class="col"><a href="/Projects/Project1/aboutUs.html">About Us</a></div>
-                        </div>
-                        <div class="row">
-                            <div class="col"><a href="/Projects/Project1/index.html">Press</a></div>
-                            <div class="col"><a href="#projects">Projects</a></div>
-                            <div class="col"><a href="/Projects/Project1/index.html">Privacy Policy</a></div>       
-                        </div>
-                    </div>
-                </div>
+        <footer id="footer">
+            <div class="footer-left">
+                <a href="/index.html">
+                    <img class="header-logo" src="/resources/images/logos/circle.svg" alt="Circle Logo">
+                </a>
+                <address>2972 Westheimer Rd. Santa Ana, Illinois 85486</address>
+            </div>
+            <div class="footer-right">
+                <a href="/aboutUs.html"><div>Team</div></a>
+                <a href="/index.html#services"><div>Services</div></a>
+                <a href="/aboutUs.html"><div>About Us</div></a>
+                <a href="/index.html#"><div>Press</div></a>
+                <a href="/index.html#projects"><div>Projects</div></a>
+                <a href="/index.html#"><div>Privacy Policy</div></a>
             </div>
         </footer>
-        <script src="/Projects/Project1/resources/js/index.js"></script>
-        <script src="/Projects/Project1/resources/js/contact.js"></script>
+        
+        <script src="/resources/js/splash.js"></script>
+        <script src="/resources/js/index.js"></script>
+        <script src="/resources/js/contact.js"></script>
     </body>
 </html>

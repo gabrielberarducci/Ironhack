@@ -8,110 +8,111 @@
         <link rel="stylesheet" href="resources/styles/style.css" />
 
     </head>
+        <!-- Tanto el loading, header y footer han sido heredados del index y no han sufrido ningun tipo de modificacion en esta pagina. -->
     <body>
         <div class="loading">
             <div class="loading-spinner"></div>
         </div>
-
-        <header class="header">
-            <a href="/Projects/Project1/index.html">
-                <img class="header-logo" src="/Projects/Project1/resources/images/logos/circle.svg" alt="Circle Logo">
+        
+        <header class="header top-nav">
+            <a href="/index.html">
+                <img class="header-logo" src="/resources/images/logos/circle.svg" alt="Circle Logo">
             </a>
-                <nav class="header-menu">
-                <ul>
-                    <li><a href="/Projects/Project1/index.html">Home</a></li>
-                    <li><a href="/Projects/Project1/index.html#projects">Projects</a></li>
-                    <li><a href="/Projects/Project1/index.html#services">Services</a></li>
-                    <li><a href="/Projects/Project1/aboutUs.html">About</a></li>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+                <ul class="menu">
+                    <li><a href="/index.html#">Home</a></li>
+                    <li><a href="/index.html#projects">Projects</a></li>
+                    <li><a href="/index.html#services">Services</a></li>
+                    <li><a href="/aboutUs.html">About</a></li>
                 </ul>
-            </nav>    
-            <a href="/Projects/Project1/contact-us.html">
+            <a class="contactBtn" href="/contact-us.html">
                 <button class="header-button button" type="button">Contact Us</button>
             </a>
         </header>
 
         <div id="members">
             <h1>About Us</h1>
+            <!-- En esta seccion estan definidas las tarjetas de presentacion de los miembros del equipo. -->
             <section id="pictures">
-                <article>
-                    <h2>Barcelona</h2>
-                    <p>architecture, sports and flowers
-    
-                        Biography: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-                </article>
-                <article>
-                    <h2>Malaga</h2>
-                    <p>Hobbies: rpg, surf and books
-    
-                        Biography: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, quaerat tenetur distinctio labore at harum. Nisi nihil dolor maxime omnis eius ex, delectus commodi, id praesentium ratione optio harum quia.</p>
-                </article>
+                <div class="card card1">
+                    <div class="card-front">
+                      <h2>Ironman</h2>
+                    </div>
+                    <div class="card-back">
+                        <h2>Long Island, New York</h2>
+                        <br>
+                        <p>A wealthy American business magnate, playboy, philanthropist, inventor and ingenious scientist, Anthony Edward "Tony" Stark suffers a severe chest injury during a kidnapping. When his captors attempt to force him to build a weapon of mass destruction, he instead creates a mechanized suit of armor to save his life and escape captivity. Later, Stark develops his suit, adding weapons and other technological devices he designed through his company, Stark Industries. He uses the suit and successive versions to protect the world as Iron Man. Although at first concealing his true identity, Stark eventually publicly reveals himself to be Iron Man.
+                        </p>
+                    </div>
+                  </div>
+                
+                  <div class="card card2">
+                    <div class="card-front">
+                        <h2>The Hulk</h2>
+                    </div>
+                    <div class="card-back">
+                        <h2>Rocinha favela, Rio de Janeiro</h2>
+                        <br>
+                        <p>Following his accidental exposure to gamma rays while saving the life of Rick Jones during the detonation of an experimental bomb, Banner is physically transformed into the Hulk when subjected to emotional stress, at or against his will. This transformation often leads to destructive rampages and to conflicts that complicate Banner's civilian life. The Hulk's level of strength is normally conveyed as proportionate to his level of anger. Commonly portrayed as a raging savage, the Hulk has been represented with other alter egos, from a mindless, destructive force (War), to a brilliant warrior (World-Breaker), a self-hating protector (the Devil/Immortal), a genius scientist in his own right (Doc Green), and a gangster (Joe Fixit).
+                        </p>
+                    </div>
+                  </div>
             </section>
-            
+            <!-- En esta seccion se muestran 3 videos extraidos de youtube. El codigo fue generado directamente desde la app de youtube y adaptado al formato especifico de esta web -->
             <section id="videos">
-                <h2>Our favourite songs!</h2>
-                <article id="video1">
+                <h2 class="aboutUsTitle">Our favourite songs!</h2>
+                <article id="video1" class="videoTags">
                     <h3>Music!</h3>
-                    <title></title>
-                    <a href=""></a>
-                    <p>Duración:</p>
-                    <span id="duracion1"></span>
-                    <p>Estilo:</p>
-                    <span id="estilo1"></span>
-                    <iframe width="600" height="300" src="https://www.youtube.com/embed/WVJdv-s9QWg" title="Aerith&#39;s Theme (Final Fantasy VII)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h4>Nobuo Uematsu</h4>
+                    <a href="https://www.youtube.com/watch?v=WVJdv-s9QWg">Aerith Theme</a>
+                    <p><strong>Duración: </strong> 5:49 minutes</p>
+                    <p><strong>Estilo: </strong> Videogame OST</p>
+                    <iframe style="border-radius:12px" src="https://www.youtube.com/embed/WVJdv-s9QWg" title="Aerith&#39;s Theme (Final Fantasy VII)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </article>
-                <article id="video2">
+                <article id="video2" class="videoTags">
                     <h3>Music!</h3>
-                    <title></title>
-                    <a href=""></a>
-                    <p>Duración:</p>
-                    <span id="duracion2"></span>
-                    <p>Estilo:</p>
-                    <span id="estilo2"></span>
-                    <iframe width="600" height="300" src="https://www.youtube.com/embed/LuSf-Eadb2s" title="Robe - Ininteligible" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h4>Robe</h4>
+                    <a href="https://www.youtube.com/watch?v=LuSf-Eadb2s&ab_channel=Robe">Ininteligible</a>
+                    <p><strong>Duración: </strong> 7:55 minutes</p>
+                    <p><strong>Estilo: </strong> Rock</p>
+                    <iframe style="border-radius:12px" src="https://www.youtube.com/embed/LuSf-Eadb2s" title="Robe - Ininteligible" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </article>
-                <article id="video3">
+                <article id="video3" class="videoTags">
                     <h3>Music!</h3>
-                    <title></title>
-                    <a href=""></a>
-                    <p>Duración:</p>
-                    <span id="duracion3"></span>
-                    <p>Estilo:</p>
-                    <span id="estilo3"></span>
-                    <iframe width="600" height="300" src="https://www.youtube.com/embed/GKnQGP67Xd0" title="Odín | Destripando la Historia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h4>Destripando la historia</h4>
+                    <a href="https://www.youtube.com/watch?v=GKnQGP67Xd0&ab_channel=PascuyRodri">Odin</a>
+                    <p><strong>Duración: </strong> 3:02 minutes</p>
+                    <p><strong>Estilo: </strong> Power Metal</p>
+                    <iframe style="border-radius:12px" src="https://www.youtube.com/embed/GKnQGP67Xd0" title="Odín | Destripando la Historia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </article>
             </section>
-
+            <!-- En esta seccion se muestra un podcast de Spotify. El codigo fue generado directamente desde la app de Spotify y adaptado al formato especifico de esta web -->
             <section id="podcasts">
-                <h2>The best podcast we can show you</h2>
+                <h2 class="aboutUsTitle">The best podcast we can show you</h2>
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/7ASG4c5iiTfSa1g40dz0Og?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </section>
         </div>
 
-        <footer>
-            <div class="footer-container">
-                <div class="footer-left">
-                    <a href="/Projects/Project1/index.html">
-                        <img class="header-logo" src="/Projects/Project1/resources/images/logos/circle.svg" alt="Circle Logo">
-                    </a>
-                    <address>2972 Westheimer Rd. Santa Ana, Illinois 85486</address>
-                </div>
-                <div class="footer-right">
-                    <div class="table">
-                        <div class="row">
-                            <div class="col"><a href="/Projects/Project1/aboutUs.html">Team</a></div>
-                            <div class="col"><a href="#services">Services</a></div>
-                            <div class="col"><a href="/Projects/Project1/aboutUs.html">About Us</a></div>
-                        </div>
-                        <div class="row">
-                            <div class="col"><a href="/Projects/Project1/index.html">Press</a></div>
-                            <div class="col"><a href="#projects">Projects</a></div>
-                            <div class="col"><a href="/Projects/Project1/index.html">Privacy Policy</a></div>       
-                        </div>
-                    </div>
-                </div>
+        <footer id="footer">
+            <div class="footer-left">
+                <a href="/index.html">
+                    <img class="header-logo" src="/resources/images/logos/circle.svg" alt="Circle Logo">
+                </a>
+                <address>2972 Westheimer Rd. Santa Ana, Illinois 85486</address>
+            </div>
+            <div class="footer-right">
+                <a href="/aboutUs.html"><div>Team</div></a>
+                <a href="/index.html#services"><div>Services</div></a>
+                <a href="/aboutUs.html"><div>About Us</div></a>
+                <a href="/index.html#"><div>Press</div></a>
+                <a href="/index.html#projects"><div>Projects</div></a>
+                <a href="/index.html#"><div>Privacy Policy</div></a>
             </div>
         </footer>
-        <script src="/Projects/Project1/resources/js/index.js"></script>
-        <script src="/Projects/Project1/resources/js/about.js"></script>
+        
+        <script src="/resources/js/splash.js"></script>
     </body>
 </html>

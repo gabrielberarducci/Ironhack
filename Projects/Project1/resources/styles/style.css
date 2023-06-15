@@ -16,7 +16,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(239, 243, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,18 +47,18 @@ a {
 }
 
 .loading-spinner {
-  border: 0px solid #f3f3f3;
-  border-top: 5px solid #e9c200;
+  border: 10px solid #f9f9f9;
+  border-top: 10px solid #072ac8;
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
-  animation: spin 2s linear infinite;
+  width: 300px;
+  height: 300px;
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  0% { transform:rotate(0deg); }
+  0% { transform:matrix(1)(0deg); }
   100% { transform: rotate(360deg); }
-}
+} 
 
 /* ------------------------------ Back to TOP button ------------------------------ */
 
@@ -73,9 +73,10 @@ a {
   color: white;
   font-weight: bold;
   width: 100%;
+  z-index: 999;
 }
 
-/* ------------------------------ Navbar ------------------------------ */
+/* ------------------------------ Header Section ------------------------------ */
 
 .header {
   width: 100%;
@@ -89,7 +90,6 @@ a {
   display: inline-block;
   align-items: center;
   text-align: center;
-
 }
 
 .header-menu ul {
@@ -125,7 +125,6 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  
 }
 
 .button {
@@ -136,20 +135,18 @@ a {
   color: white;
   background-color: #072ac8;
   cursor: pointer;
-  
 }
 
 .button:hover {
   background-color: rgb(36, 36, 36);
 }
 
-/* ------------------------------ Hero ------------------------------ */
+/* ------------------------------ Hero Section ------------------------------ */
 
 .hero {
   display: flex;
   justify-content: space-around;
   max-width: 60rem;
-
 }
 
 .hero-content {
@@ -182,7 +179,7 @@ a {
 .hero-img-container {
   max-width: 30rem;
   position: relative;
-  }
+}
 
 .hero-img {
   height: 30rem;
@@ -201,31 +198,47 @@ a {
   top: 350px;
   left: 270px;
 }
-/* ------------------------------ Partners ------------------------------ */
+/* ------------------------------ Carousel Section ------------------------------ */
 
 .carousel {
   max-width: 60rem;
   overflow: hidden;
-  padding: 5rem 0rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
 }
 
 .carousel-inner {
   display: flex;
   max-width: 80rem;
-  transition: transform 0.1s ease;
+  animation: carousel-animation 20s linear infinite;
+}
+
+@keyframes carousel-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-233.5%);
+  }
 }
 
 .carousel-item {
-  flex: 0 0 33.33%; /* Ancho de cada imagen (33.33% para mostrar 3 imágenes) */
-  align-items: center;
+  flex: 0 0 33.33%;
+  align-items:center;
+  justify-content: center;
 }
 
 .carousel-item img {
-  width: 30%;
+  width: 50%;
   height: auto;
+  filter: grayscale(100%);
 }
 
-/* ------------------------------ Recent projects ------------------------------ */
+.carousel-item img:hover {
+  filter: grayscale(0%);
+}
+
+/* ------------------------------ Projects Section ------------------------------ */
 
 .projects-container {
   display: flex;
@@ -233,7 +246,6 @@ a {
   flex-direction: column;
   justify-content:space-between;
   align-content: center;
-  
 }
 
 .title {
@@ -248,14 +260,14 @@ a {
   align-items: center;
   flex-wrap: wrap;
   justify-content:space-around;
-  padding: rem 0rem;
+  padding: 0rem 0rem;
 }
 
 .article {
   background-color: white;
+  max-width: 19.5rem;
   padding: 2rem;
   height: 30rem;
-  width: 19.3rem;
   margin: 0.5rem;
   position: relative;
 }
@@ -275,19 +287,18 @@ a {
 }
 
 .project-img {
-  width: 19.3rem;
+  width: 100%;
   height: 12rem;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-
-/* ------------------------------ Client reviews ------------------------------ */
+/* ------------------------------ Testimonials Section ------------------------------ */
 
 .testimonial { 
-  background-color: rgb(47, 44, 59);
-  background-image: url("/Projects/Project1/resources/images/testimonial-section/orbit.png");
+  background-color: rgb(38, 45, 78);
+  background-image: url("/resources/images/testimonial-section/orbit.png");
   background-size: cover;
   display: flex;
   flex-direction: row;
@@ -315,6 +326,7 @@ a {
   color: rgb(205, 187, 0);
   font-size: 1.2rem;
 }
+
 .left-images {
   display: flex;
   flex-direction: column;
@@ -352,8 +364,7 @@ a {
   font-size: 0.7rem;
 }
 
-
-/* ------------------------------ Services ------------------------------ */
+/* ------------------------------ Services Section ------------------------------ */
 
 #services { 
   max-width: 60rem;
@@ -396,14 +407,15 @@ a {
   font-weight: 500;
 }
 
-
-/* ------------------------------ Questions for ---------------------------- */
+/* ------------------------------ Newsletter Section ---------------------------- */
 
 .newsletter {
-  background-color: #e9c200;
-  width: 60rem;
+  background-color: #ffc123;
+  width: 100%;
+  max-width: 60rem;
   height: 20rem;
   display: flex;
+  flex-shrink: 1;
   flex-direction: column;
   justify-items: center;
   align-items: center;
@@ -433,58 +445,55 @@ a {
 
 /* ------------------------------ Footer ------------------------------ */
 
-.footer-container {
-  width: 60rem;
-  margin: 4rem 0rem;
+#footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 6rem 0rem;
+  padding: 0rem 0.3rem;
+}
+
+.footer-left img {
+  width: 6rem;
 }
 
 .footer-left address {
   color: #626262;
-  width: 15rem;
+  width: 60%;
   padding-top: 1rem;
 }
 
-.table {
-  display: table;
+.footer-right {
+  width: 35%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 }
 
-.row {
-  display: table-row;
-}
-
-.col {
-  display: table-cell;
-  padding: 0rem 2rem 2rem 1rem;
-}
-
-.col a {
-  text-decoration: none;
-  color: #072ac8;
+.footer-right a {
   font-weight: 500;
-  font-size: 0.9rem;
 }
-/* -------------------------------------------------------------------------- */
-/* ------------------------------ PROJECT html ------------------------------ */
-/* -------------------------------------------------------------------------- */
 
-/* ------------------------------ Project main ------------------------------ */
+/* ------------------------------------------------------------------------------- */
+/* -------------------------------- PROJECT html --------------------------------- */
+/* ------------------------------------------------------------------------------- */
 
-#mainProject {
-  width: 60rem;
+.mainArticle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 60rem;
   margin: 3rem;
 }
 
-#mainProject img {
-  width: 60rem;
-  height: 25rem;
-  margin: 4rem 0rem;
-  object-fit: cover;
-}
-
-#mainProject h2 {
+.mainArticle h2 {
   font-size: 3.5rem;
+  width: 100%;
 }
 
 .subtitle {
@@ -494,21 +503,27 @@ a {
   font-size: 1.1rem;
   color: #626262;
   margin-top: 2rem;
-  width: 60rem;
+  width: 100%;
 }
 
 .articleSubtitle {
-  width: 35rem;
+  width: 50%;
 }
 
 .date {
-  width: 15rem;
+  width: 15%;
 }
+
+#mainProject img {
+  width: 100%;
+  height: 25rem;
+  margin: 4rem 0rem;
+  object-fit: cover;
+}
+
 /* ----------------------------------------------------------------------------- */
 /* ------------------------------ CONTACT-US html ------------------------------ */
 /* ----------------------------------------------------------------------------- */
-
-/* ------------------------------ Form ------------------------------ */
 
 #main {
 width: 70%;
@@ -571,7 +586,6 @@ max-width: 60rem;
   background-color: rgb(222, 222, 222);
   border: none;
   padding: 1rem;
-
 }
 
 .contactButton {
@@ -602,34 +616,805 @@ max-width: 60rem;
   text-align: start;
 }
 
-/* ----------------------------------------------------------------------------- */
-/* ------------------------------ About html ------------------------------ */
-/* ----------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* ------------------------------ About US html ----------------------------------- */
+/* -------------------------------------------------------------------------------- */
 
-/* Your CSS code goes here */
+.aboutUsTitle {
+  margin: 4rem 0rem;
+}
+
+#members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60rem;
+  width: 100%;
+}
+
+#members h1 {
+  margin: 2rem;
+}
+
+#pictures {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 60rem;
+  width: 90%;
+}
+
+.card1 .card-front{
+  height: 30rem;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #000000;
+  background-image: url("/resources/images/aboutus-section/1.png");
+  background-size: cover;
+}
+
+.card2 .card-front{
+  height: 30rem;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #000000;
+  background-image: url("/resources/images/aboutus-section/2.png");
+  background-size: cover;
+}
+
+.card {
+  width: 23.4rem;
+  height: 30rem;
+  perspective: 800px;
+  margin: 2rem 0rem;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  border-radius: 20px;
+}
+
+.card-front {
+  background-color: #f2f2f2;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  color: white;
+  padding: 2rem;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  background-color: #3a3a3a;
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+#videos {
+  width: 100%;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#videos article {
+  width: 100%;
+  max-width: 60rem;
+  padding: 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#videos iframe {
+  width: 90%;
+  max-width: 30rem;
+  height: 20rem;
+}
+
+.videoTags p {
+  padding: 0.5rem 0rem;
+}
+
+
+.videoTags h4 {
+  padding: 0.5rem 0rem;
+}
+
+#podcasts {
+  width: 90%;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#podcasts iframe {
+  max-width: 38rem;
+}
 
 /* --------------------------------------------------------------------------- */
 /* ------------------------------ MEDIA QUERIES ------------------------------ */
 /* --------------------------------------------------------------------------- */
 
-/* ------------------------- Smaller than 990px (tablet) ------------------------- */
+
+
+/* ------------------------------ Smaller than 990px (tablet) ---------------------------- */
+
 @media (max-width: 990px) {
-  /* Your CSS code goes here */
+
+/* -----------------------------------Hero Section - Smaller than 990px (tablet) ---------------------------------------- */
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 60rem;
+  }
+  
+  .hero-content {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    max-width: 40rem;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero p {
+    color: #626262;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 4rem 3rem 0rem;
+  }
+  
+  .hero label {
+    color: #626262;
+    font-weight: 500;
+    padding-left: 8rem;
+    padding-right: 0.5rem;
+  }
+  
+  .hero-button {
+    display: inline;
+  }
+  
+  .hero-img-container {
+    max-width: 30rem;
+    position: relative;
+  }
+  
+  .hero-img {
+    max-height: 30rem;
+  }
+  
+  .hero-img-card1 {
+    height: 16rem;
+    position: absolute;
+    right: 250px;
+    bottom: 250px;
+  }
+  
+  .hero-img-card2 {
+    height: 16rem;
+    position: absolute;
+    top: 350px;
+    left: 270px;
+  }
+
+/* ----------------------------------- Carousel Section - Smaller than 990px (tablet) ---------------------------------------- */
+
+  .carousel {
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    padding-left: 5rem;
+  }
+
+  .carousel-inner {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60rem;
+    align-items: center;
+    justify-content: center;
+    animation: none;
+  }
+
+  @keyframes carousel-animation {}
+
+  .carousel-item {
+    padding-bottom: 3rem;
+    align-items:center;
+    justify-content: center;
+  }
+
+  .carousel-item img {
+    width: 40%;
+    height: auto;
+    filter: grayscale(0%);
+  }
+
+  .secondRound {
+    display: none;
+  }
+
+/* ----------------------------------- Projects Section - Smaller than 990px (tablet) ---------------------------------------- */
+
+  .projects-container {
+    display: flex;
+    max-width: 53rem;
+    flex-direction: column;
+    justify-content:space-between;
+    align-content: center;
+    
+  }
+
+  .title {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 2rem;
+  }
+
+  .articles-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content:start;
+    padding: rem 0rem;
+  }
+
+  .article {
+    background-color: white;
+    padding: 2rem;
+    height: 30rem;
+    margin: 1.0rem;
+    position: relative;
+  }
+
+  .article h2 {
+    font-size: 1rem;
+    padding-top: 12rem;
+  }
+
+  .article p {
+    padding: 2rem 0rem;
+  }
+
+  .article a {
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .project-img {
+    height: 12rem;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+/* ----------------------------------- Testimonial Section - Smaller than 990px (tablet) ---------------------------------------- */
+
+  .testimonial { 
+    background-color: rgb(47, 44, 59);
+    background-image: url("/Projects/Project1/resources/images/testimonial-section/orbit.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: stretch;
+    max-width: 53rem;
+    height: 28rem;
+    margin: 2rem;
+  }
+
+/* ----------------------------------- Services Section - Smaller than 990px (tablet) ---------------------------------------- */
+
+  #services { 
+    max-width: 53rem;
+    margin: 2rem;
+  }
+
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    background-color: white;
+    margin: 0.5rem;
+    padding: 1.5rem;
+    width: 15rem;
+    height: 22rem;
+  }
+
+  .tag img {
+    background-color: rgb(216, 233, 239);
+    width:60px;
+    height:60px;
+    padding: 0.7rem;
+    border-radius:30px;
+    margin: 1rem;
+  }
+
+  .tag h3 {
+    padding: 1rem 0rem;
+    font-size: 1rem;
+  }
+
+  .tag p {
+    padding: 1.4rem 0rem;
+  }
+
+  .tag a {
+    text-decoration: none;
+    color: #072ac8;
+    font-weight: 500;
+  }
+
+/* ----------------------------------- Newsletter Section - Smaller than 990px (tablet) ---------------------------------------- */
+
+  .newsletter {
+    background-color: #ffc123;
+    width: 100%;
+    max-width: 60rem;
+    height: 20rem;
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem;
+    margin: 5rem;
+  }
+
+  .newsletter h2 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .newsletter p {
+    font-size: 0.8rem;
+    color: #626262;
+    padding-bottom: 3rem;
+  }
+
+  .newsletter input {
+    width: 25rem;
+    height: 3rem;
+    border: none;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+ 
 }
 
 /* ------------------------- Smaller than 766px (mobile) ------------------------- */
-@media (max-width: 766px) {
-  /* Your CSS code goes here */
-}
 
+@media (max-width: 766px) {
+  
+/* ---------------------------- Hero Section - Smaller than 766px (mobile) ------------------------------- */
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 60rem;
+  }
+  
+  .hero-content {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    max-width: 40rem;
+  }
+  
+  .hero h1 {
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero p {
+    color: #626262;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 4rem 3rem 3rem;
+  }
+  
+  .hero label {
+    color: #626262;
+    font-weight: 500;
+    padding-left: 5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .hero-button {
+    display: inline;
+  }
+  
+  .hero-img-container {
+    max-width: 30rem;
+    position: relative;
+  }
+  
+  .hero-img {
+    max-height: 25rem;
+  }
+  
+  .hero-img-card1 {
+    display: none;
+    height: 16rem;
+    position: absolute;
+    right: 250px;
+    bottom: 250px;
+  }
+
+  .hero-img-card2 {
+    display: none;
+    height: 16rem;
+    position: absolute;
+    top: 350px;
+    left: 270px;
+  }
+
+/* ------------------------------Projects Section - Smaller than 766px (mobile) ------------------------------- */
+
+  .projects-container {
+    display: flex;
+    max-width: 53rem;
+    flex-direction: column;
+    justify-content:space-between;
+    align-content: center;
+    margin: 2rem 0rem;
+  }
+
+  .mainArticle h2 {
+    font-size: 2rem;
+  }
+  
+  .articleSubtitle {
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  .date {
+    width: 40%;
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 2rem;
+  }
+
+  .articles-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content:start;
+    padding: rem 0rem;
+  }
+
+  .article {
+    background-color: white;
+    padding: 2rem;
+    height:fit-content;
+    margin: 1.0rem;
+    position: relative;
+  }
+
+  .article h2 {
+    font-size: 1rem;
+    padding-top: 12rem;
+  }
+
+  .article p {
+    padding: 2rem 0rem;
+  }
+
+  .article a {
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .project-img {
+    height: 12rem;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+/* ------------------------ Testimonial Section - Smaller than 766px (mobile) ----------------------------- */
+
+  .testimonial { 
+    background-color: rgb(47, 44, 59);
+    background-image: url("/Projects/Project1/resources/images/testimonial-section/orbit.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: stretch;
+    max-width: 53rem;
+    height: 23rem;
+    margin: 2rem 0rem;
+  }
+
+  .central-text {
+    padding: 2rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 2;
+  }
+
+  .left-images {
+    display: none;
+  }
+  
+  .right-images {
+    display: none;
+  }
+
+/* ------------------------- Services Section - Smaller than 766px (mobile) --------------------------- */
+
+  .services-container {
+    justify-content: center;
+  }
+
+  .tag {
+    width: 80%;
+    height: auto;
+  }
+
+/* --------------------------- Newsletter Section - Smaller than 766px (mobile) --------------------------- */
+
+  .newsletter {
+    background-color: #ffc123;
+    width: 100%;
+    max-width: 60rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    margin: 5rem;
+  }
+
+  .newsletter h2 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .newsletter p {
+    font-size: 0.8rem;
+    color: #626262;
+    padding-bottom: 1rem;
+  }
+
+  .newsletter input {
+    width: 90%;
+    height: 3rem;
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .newsletter .button {
+    width: 90%;
+  }
+
+/* --------------------------- Footer Section - Smaller than 766px (mobile) --------------------------- */
+
+  #footer {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    margin: 0rem;
+    padding-bottom: 6rem;
+  }
+  
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+  }
+
+  .footer-left address {
+    text-align: center;
+    color: #626262;
+    padding-top: 1rem;
+  }
+  
+  .footer-right {
+    width: 60%;
+  }
+
+  .footer-right a {
+    text-align: center;
+  }
+
+/* --------------------------- Contact Us HTML - Smaller than 766px (mobile) --------------------------- */
+
+  #main {
+    width: 95%;
+  }
+    
+  #main h1 {
+    font-size: 2rem;
+  }
+
+  .emailAndPhone {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  
+  .emailContainer {
+    width: auto;
+  }
+  
+  .phoneContainer {
+    width: auto;
+  }
+}
 /* ------------------------------ Hamburguer menu ------------------------------ */
 
-/* Your CSS code goes here */
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-/* ------------------------------ Alert ------------------------------ */
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
 
-/* Your CSS code goes here */
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-/* ------------------------------ Sticky scroll bar ------------------------------ */
+#menu-toggle {
+  display: none;
+}
 
-/* Your CSS code goes here */
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #646464;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(151, 151, 151, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+/* ------------------------------ Hamburguer menu - Smaller than 990px (tablet)------------------------------ */
+
+@media (max-width: 990px) {
+  
+  .header {
+    padding: 1rem;
+    width: 90%;
+    justify-content: space-between;
+  }
+  
+  .menu-button-container {
+    display: flex;
+  }
+
+  .contactBtn {
+    display: none;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .menu > li a{
+    font-size: 0.9rem;
+    color: #3a3a3a;
+    font-weight: 500;
+  }
+
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #aaaaaa;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #aaaaaa;
+    z-index: 999;
+  }
+  
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+
+}
